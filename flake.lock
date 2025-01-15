@@ -1,0 +1,80 @@
+{
+  "nodes": {
+    "crane": {
+      "locked": {
+        "lastModified": 1736898272,
+        "narHash": "sha256-D10wlrU/HCpSRcb3a7yk+bU3ggpMD1kGbseKtO+7teo=",
+        "owner": "ipetkov",
+        "repo": "crane",
+        "rev": "6a589f034202a7c6e10bce6c5d1d392d7bc0f340",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ipetkov",
+        "repo": "crane",
+        "type": "github"
+      }
+    },
+    "mkflake": {
+      "locked": {
+        "lastModified": 1712284878,
+        "narHash": "sha256-66dqRuL4kQw9r/xthE7RbTdaszwUZLdjwFwFloeu6NI=",
+        "owner": "jonascarpay",
+        "repo": "mkflake",
+        "rev": "eb1172a9cd34e0a42848e787fb11a673f658c9e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "jonascarpay",
+        "repo": "mkflake",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1736910646,
+        "narHash": "sha256-Jzq/EKtSxOCA9hFuovQGlzOuRA8p9cB4mMYWUeCW4FA=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "0bd024d34eb07cef235f94258423f40a41182088",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "crane": "crane",
+        "mkflake": "mkflake",
+        "nixpkgs": "nixpkgs",
+        "rust-overlay": "rust-overlay"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1736907983,
+        "narHash": "sha256-fw55wVwpJW36Md2HZBKuxX3YHGeqsGsspPLtCMVr1Y8=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "eaa365c911441e07e387ff6acc596619fc50b156",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
