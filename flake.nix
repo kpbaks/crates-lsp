@@ -62,6 +62,7 @@
 
           # https://blog.katona.me/2025/01/12/Adding-crates-io-version-check-to-Helix-editor/
           homeManagerModules.default = {
+            home.packages = [ crates-lsp ];
             programs.helix = {
               extraPackages = [
                 crates-lsp
