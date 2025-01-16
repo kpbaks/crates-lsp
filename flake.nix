@@ -59,6 +59,38 @@
 
             checks = self.checks.${system};
           };
+
+          # https://blog.katona.me/2025/01/12/Adding-crates-io-version-check-to-Helix-editor/
+          homeManagerModules.default = {
+            programs.helix = {
+              extraPackages = [
+                crates-lsp
+              ];
+              languages = {
+                language-server.crates-lsp = {
+                  command = "${pkgs.lib.getExe crates-lsp}";
+                };
+
+                language = [
+                  {
+                    name = "Cargo.toml";
+                    scope = "source.toml";
+                    injection-regex = "toml";
+                    file-types = [ { glob = "Cargo.toml"; } ];
+                    comment-token = "#";
+                    language-servers = [ "crates-lsp" ];
+                    grammar = "toml";
+                    indent = {
+                      tab-width = 2;
+                      unit = "  ";
+                    };
+                    diagnostic-severity = "info";
+                  }
+                ];
+              };
+            };
+          };
+
         };
     };
 
