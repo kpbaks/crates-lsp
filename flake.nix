@@ -1,4 +1,6 @@
 {
+  description = "Language Server implementation targeted specifically towards the `Cargo.toml` file of Rust projects, providing auto-completion for crate versions and in-editor hints when the selected crate versions are out of date.";
+
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     rust-overlay = {
